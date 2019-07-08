@@ -1,0 +1,35 @@
+\renewcommand\thesection{\Roman{section}}
+\newcommand{\HorRule}{\color{black} \rule{\linewidth}{1pt}} % Defines the gold horizontal rule around the title
+
+%\pagestyle{fancy} % Enables the custom headers/footers
+
+\fancypagestyle{firststyle}
+{
+  \lhead{}
+  \chead{}
+  \rhead{\raisebox{-2.2\height}{\includegraphics[height=30mm]{figures/iris-hep-bluprint-logo.png}}}
+
+  \lfoot{}
+  \cfoot{}
+  \rfoot{}
+
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+\fancypagestyle{reststyle}
+{
+  \lhead{}
+  \chead{}
+  \rhead{}
+
+  \lfoot{\textit{Institute for Research and Innovation for Software in High-Energy Physics}}
+  \cfoot{}
+  \rfoot{\footnotesize Page \thepage\ of \pageref{LastPage}} % "Page 1 of 2"
+
+  \renewcommand{\headrulewidth}{0.0pt} % No header rule
+  \renewcommand{\footrulewidth}{0.4pt} % Thin footer rule
+}
+
+\newcommand{\ttbar}{\ensuremath{t\bar{t}}}
+\newcommand{\met}{\ensuremath{E_{T}^{\mathrm{miss}}}}
+\newcommand{\etal}{{\it et al.}}

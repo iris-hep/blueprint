@@ -1,0 +1,67 @@
+\documentclass[11pt,letterpaper,fleqn]{article}
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage{amsfonts,amsmath}
+\usepackage{subfigure} % need for subfigures
+\usepackage{wrapfig}
+\usepackage[margin=1in]{geometry}
+\usepackage{cite}
+\usepackage{amssymb}
+\usepackage[final]{pdfpages}
+\usepackage{hyperref,enumitem}
+\hypersetup{
+colorlinks, citecolor=black, filecolor=black, linkcolor=black, urlcolor=black}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{siunitx}
+\sisetup{group-separator = {,}}
+\usepackage{titlesec}
+\titlespacing\section{0pt}{6pt plus 4pt minus 2pt}{0pt plus 0pt minus 0pt}
+\titlespacing\subsection{0pt}{6pt plus 4pt minus 2pt}{0pt plus 0pt minus 0pt}
+\titlespacing\subsubsection{0pt}{6pt plus 4pt minus 2pt}{0pt plus 0pt minus 0pt}
+\usepackage{titling} % Allows custom title configuration
+\usepackage{fancyhdr} % Needed to define custom headers/footers
+\usepackage{lastpage} % Used to determine the number of pages in the document
+
+%\usepackage[svgnames,dvipsnames]{xcolor} % Enabling colors by their 'svgnames'
+
+% Add you own definitions here (file report-defs.sty).
+\usepackage{report-defs}
+
+%-------------------------------------------------------------------------------
+%   TITLE SECTION
+%-------------------------------------------------------------------------------
+
+\pretitle{\vspace{-40pt} \begin{flushleft} \HorRule \fontsize{50}{50} \usefont{OT1}{phv}{b}{n} \color{blue} \selectfont} % Horizontal rule before the title
+\title{Test Article} % Your article title
+\posttitle{\par\end{flushleft}\vskip 0.5em} % Whitespace under the title
+\preauthor{\begin{flushleft}\large \lineskip 0.5em \usefont{OT1}{phv}{b}{sl} \color{black}} % Author font configuration
+
+\author{John Doe\\} % Your name
+
+\postauthor{\footnotesize \usefont{OT1}{phv}{m}{sl} \color{black} % Configuration for the institution name
+Sample Institute of Technology\\
+% Your institution
+
+%% logo
+%\rhead{\raisebox{-2.0\height}{\includegraphics[height=40mm]{images/logo2}}}
+
+\par\end{flushleft} \HorRule} % Horizontal rule after the title
+
+\date{\today} % Add a date here if you would like one to appear underneath the title block
+
+%-------------------------------------------------------------------------------
+
+\begin{document}
+\maketitle % Print the title
+
+\thispagestyle{firststyle} % Enabling the custom headers/footers for the first page
+
+Yo
+
+\newpage
+\thispagestyle{reststyle} % Enabling the custom headers/footers for the first page
+
+Ho
+
+\end{document}
