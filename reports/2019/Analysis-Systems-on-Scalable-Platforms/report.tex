@@ -23,6 +23,9 @@ colorlinks, citecolor=black, filecolor=black, linkcolor=black, urlcolor=black}
 \usepackage{fancyhdr} % Needed to define custom headers/footers
 \usepackage{lastpage} % Used to determine the number of pages in the document
 
+\usepackage[T1]{fontenc}
+
+
 %\usepackage[svgnames,dvipsnames]{xcolor} % Enabling colors by their 'svgnames'
 
 % Add you own definitions here (file report-defs.sty).
@@ -32,23 +35,34 @@ colorlinks, citecolor=black, filecolor=black, linkcolor=black, urlcolor=black}
 %   TITLE SECTION
 %-------------------------------------------------------------------------------
 
-\pretitle{\vspace{-40pt} \begin{flushleft} \HorRule \fontsize{50}{50} \usefont{OT1}{phv}{b}{n} \color{blue} \selectfont} % Horizontal rule before the title
-\title{Test Article} % Your article title
+\pretitle{\vspace{-40pt} \begin{flushleft} \HorRule \fontsize{15}{15} \usefont{OT1}{phv}{b}{n} \selectfont} % Horizontal rule before the title
+\title{Summary of Blueprint Workshop: \\
+\color{blue}
+\textit{Analysis Systems R\&D on Scalable Platforms}} % Your article title
 \posttitle{\par\end{flushleft}\vskip 0.5em} % Whitespace under the title
-\preauthor{\begin{flushleft}\large \lineskip 0.5em \usefont{OT1}{phv}{b}{sl} \color{black}} % Author font configuration
+\preauthor{\begin{flushleft} Prepared by: \\ \large \lineskip 0.5em \usefont{OT1}{phv}{b}{sl} \color{black}} % Author font configuration
 
-\author{John Doe\\} % Your name
-
-\postauthor{\footnotesize \usefont{OT1}{phv}{m}{sl} \color{black} % Configuration for the institution name
-Sample Institute of Technology\\
-% Your institution
-
-%% logo
-%\rhead{\raisebox{-2.0\height}{\includegraphics[height=40mm]{images/logo2}}}
-
+\author{
+  Kyle Cranmer
+  \footnotesize \usefont{OT1}{phv}{m}{sl}
+  (New York University)
+  \and
+  \large \usefont{OT1}{phv}{b}{sl}
+  Rob Gardner
+  \footnotesize \usefont{OT1}{phv}{m}{sl}
+  (University of Chicago)
+  \and
+  \large \usefont{OT1}{phv}{b}{sl}
+  Mark Neubauer
+  \footnotesize \usefont{OT1}{phv}{m}{sl}
+  (University of Illinois at Urbana-Champaign)}
+\postauthor{
+%\footnotesize \usefont{OT1}{phv}{m}{sl} \color{black} University of Illinois at Urbana-Champaign\\
 \par\end{flushleft} \HorRule} % Horizontal rule after the title
 
 \date{\today} % Add a date here if you would like one to appear underneath the title block
+
+\renewcommand{\and}{\\}
 
 %-------------------------------------------------------------------------------
 
