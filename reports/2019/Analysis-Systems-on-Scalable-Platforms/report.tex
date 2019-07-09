@@ -10,7 +10,7 @@
 \usepackage[final]{pdfpages}
 \usepackage{hyperref,enumitem}
 \hypersetup{
-colorlinks, citecolor=black, filecolor=black, linkcolor=black, urlcolor=black}
+colorlinks, citecolor=blue, filecolor=black, linkcolor=blue, urlcolor=blue}
 \usepackage{booktabs}
 \usepackage{multirow}
 \usepackage{siunitx}
@@ -22,11 +22,10 @@ colorlinks, citecolor=black, filecolor=black, linkcolor=black, urlcolor=black}
 \usepackage{titling} % Allows custom title configuration
 \usepackage{fancyhdr} % Needed to define custom headers/footers
 \usepackage{lastpage} % Used to determine the number of pages in the document
-
-\usepackage[T1]{fontenc}
-
-
-%\usepackage[svgnames,dvipsnames]{xcolor} % Enabling colors by their 'svgnames'
+\usepackage[english]{babel}
+\usepackage{blindtext}
+\usepackage{draftwatermark}
+\SetWatermarkText{Draft v0.0}
 
 % Add you own definitions here (file report-defs.sty).
 \usepackage{report-defs}
@@ -35,32 +34,38 @@ colorlinks, citecolor=black, filecolor=black, linkcolor=black, urlcolor=black}
 %   TITLE SECTION
 %-------------------------------------------------------------------------------
 
-\pretitle{\vspace{-40pt} \begin{flushleft} \HorRule \fontsize{15}{15} \usefont{OT1}{phv}{b}{n} \selectfont} % Horizontal rule before the title
-\title{Summary of Blueprint Workshop: \\
-\color{blue}
-\textit{Analysis Systems R\&D on Scalable Platforms}} % Your article title
+\date{} % blank out date from fancyhdr
+
+\pretitle{\vspace{-40pt} \begin{flushleft} \fontsize{15}{15} \usefont{OT1}{phv}{b}{n} \selectfont} % Horizontal rule before the title
+\title{\large Summary of Blueprint Workshop: \\
+\vspace{1pt}
+\color{red}
+\LARGE \textit{Analysis Systems R\&D on Scalable Platforms} \\
+\color{black} \normalsize
+\vspace{10pt}
+June 21--22, 2019 \\
+New York University \\
+Meeting URL: \href{https://indico.cern.ch/event/820946/}{https://indico.cern.ch/event/820946/}
+} % Your article title
 \posttitle{\par\end{flushleft}\vskip 0.5em} % Whitespace under the title
-\preauthor{\begin{flushleft} Prepared by: \\ \large \lineskip 0.5em \usefont{OT1}{phv}{b}{sl} \color{black}} % Author font configuration
+\preauthor
+{
+  \begin{flushleft}
+    \vspace{-3pt}
+    {\normalfont Workshop Organizers:} \\
+    \vspace{3pt}
+    \large \lineskip 0.5em \usefont{OT1}{phv}{b}{sl} \color{black}} % Author font configuration
+    \author{Kyle Cranmer {\normalfont(New York University)}
+      \and  Rob Gardner {\normalfont(University of Chicago)}
+      \and  Mark Neubauer {\normalfont(University of Illinois at Urbana-Champaign)}
+      }
+      \postauthor{\par
+      \vspace{10pt}
+      {\normalfont Summary prepared by:} \\
+      \vspace{3pt}
+      Mark Neubauer {\normalfont(University of Illinois at Urbana-Champaign)}
 
-\author{
-  Kyle Cranmer
-  \footnotesize \usefont{OT1}{phv}{m}{sl}
-  (New York University)
-  \and
-  \large \usefont{OT1}{phv}{b}{sl}
-  Rob Gardner
-  \footnotesize \usefont{OT1}{phv}{m}{sl}
-  (University of Chicago)
-  \and
-  \large \usefont{OT1}{phv}{b}{sl}
-  Mark Neubauer
-  \footnotesize \usefont{OT1}{phv}{m}{sl}
-  (University of Illinois at Urbana-Champaign)}
-\postauthor{
-%\footnotesize \usefont{OT1}{phv}{m}{sl} \color{black} University of Illinois at Urbana-Champaign\\
-\par\end{flushleft} \HorRule} % Horizontal rule after the title
-
-\date{\today} % Add a date here if you would like one to appear underneath the title block
+\end{flushleft} \HorRule} % Horizontal rule after the title
 
 \renewcommand{\and}{\\}
 
@@ -68,14 +73,53 @@ colorlinks, citecolor=black, filecolor=black, linkcolor=black, urlcolor=black}
 
 \begin{document}
 \maketitle % Print the title
+\normalfont
 
-\thispagestyle{firststyle} % Enabling the custom headers/footers for the first page
+\thispagestyle{firststyle}
 
-Yo
+\vspace{-20pt}
+
+\section*{Goals}
+\vspace{5pt}
+\noindent The pur
+
+\section*{Key Outcomes}
+\vspace{5pt}
+\noindent The pur
+
+%-------------------------------------------------------------------------------
 
 \newpage
-\thispagestyle{reststyle} % Enabling the custom headers/footers for the first page
+\thispagestyle{reststyle}
 
-Ho
+\section{Overview}
+\blindtext[2]
+
+\section{Attendees}
+\blindtext[2]
+
+\section{Goals}
+\blindtext[2]
+
+\section{Activites}
+\blindtext[2]
+
+\subsection{Presentations and Discussion}
+\blindtext[2]
+
+\subsection{Breakout Session}
+\blindtext[2]
+
+\section{Key Outcomes}
+\blindtext[2]
+
+\section{Action Items}
+\blindtext[2]
+
+\section{Feedback from Attendees}
+\blindtext[2]
+
+\section{Summary}
+\blindtext[2]
 
 \end{document}
