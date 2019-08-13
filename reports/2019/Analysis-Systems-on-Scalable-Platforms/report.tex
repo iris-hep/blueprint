@@ -236,18 +236,66 @@ Lukas Heinrich (CERN) presented {\it Ecosystems I: Google Cloud Platform}.  The 
 Sanjay Arora (RedHat) presented {\it Ecosystems II: RedHat OpenShift}.  \href{https://www.openshift.com/}{OpenShift} is distribution of Kubernetes that makes on-prem clusters easier to deploy and maintain.  The model is similar to RedHat release of Linux, and there is an open source equivalent to CentOS for OpenShift: \href{https://www.okd.io/}{OKD}.  If Kubernetes is to play a central role in a re-engineered WLCG computing infrastructure, its distribution and management could benefit from solutions such as these and similar.  
 
 
-\subsubsection{Perspectives from University Resource Providers}
-
-David Ackerman (CIO, NYU) presented {\it Resource providers: university perspectives}. 
+%\subsubsection{Perspectives from University Resource Providers}
+%David Ackerman (CIO, NYU) presented {\it Resource providers: university perspectives}. 
 
 
 \subsubsection{Accelerated Systems}
 
-Andrew Chien (UChicago) presented {\it Accelerated Systems and Optimization}. 
+Andrew Chien (UChicago) presented {\it Accelerated Systems and Optimization}.  System scalability research offers an opportunity to optimize use of resources in specific areas in an end-to-end computing system.   In a local database, it is about query optimization with predicates and filters; by exploiting selectivity one can increase the scalability and performance of a system. In a public cloud context, services such as \href{https://aws.amazon.com/blogs/aws/s3-glacier-select/}{AWS S3 Select} offer the ability to accelerate services through partial selection of objects before delivery to clients.  Opportunities in HEP include (optionally hardware) filtering in strategic locations to reduce traffic on the wide area network.  Previous findings on studies of data transformation with recoding accelerators, with programmable accelerators allowing the right representation choice (and format) performed in the {\it right place} have potential for cheaper computation, less data movement and higher performance.
+
+Throughout the presentation a number of {\it dimensions of benefit} involving system optimization choices with acceleration were identified: 
+
+\begin{itemize}
+  \item Reduction in parsing \& filtering costs (through acceleration)
+  \item Performance through more aggressive query optimization
+  \item Representation of encoding in Query Execution Plan
+  \item Beyond tuple to block/transpose, special recoding (ex. ML inference and analysis for systems), etc.
+  \item Expose new optimizations, eliminate transformation overhead
+  \item Reduces the CPU load, offloaded computation, reduce total data processed
+  \item Shift of Filtering computation to Storage node
+  \item Reduces Data Center network load
+\end{itemize}
 
 
+\subsection{Afternoon Discussion}
 
-\subsection{Breakout Session}
+In thinking of concrete progress for AS-SSL activities, \href{http://www.reanahub.io/}{REANA} was identified as a likely good first deployment target for the SSL. In addition, ServiceX as deployed on Google Cloud Platform via Helm would make it an interesting use case if the SSL API is Kubernetes. 
+
+We discussed an REANA deployed on an SSL cluster provisioned with OpenShift. Success of the deployment would be to have two independent sets of people deploy. Templated python scripts, HELM charts, and YAML would be the ingredients.  What would be needed from the SSL?
+
+\begin{itemize}
+  \item Storage
+  \item Internet ingress
+  \item Load balancing
+  \item Pod capacity
+\end{itemize}
+
+Other questions arose: {\it Is there one SSL (as a service) or a standard?} As a pattern, we'd like not to have a site administrator having to follow notes off a twiki to stand up Kubernetes. We’d like the admin to connect their nodes to an SSL console and everything is automatically deployed. The process to join must be lightweight. If one observes a deployed pattern, they should be able to deploy the pattern to a local environment.
+
+If you use SSL then you should at least publish deployment instructions so others can reproduce it. An R\&D Hybrid Cloud provider. Try to make the substrate as compatible as possible with CERN-IT and FermiLab. 
+
+Question: {\it if a federated set of Kubernetes clusters is the substrated approach for SSL, do we lose anything there? Are there any blockers to this approach for the AS R\&D plans on SSL?}  The answer for AS was that there does not seem to be, but maybe HPC integration would need further consideration. For scaling test, federating SSL clusters will be desirable.  
+
+{\bf Metric data} would be useful to have from SSL.  Dashboards and retention of results, the ability to mine metadata indexed by ElasticSearch, use of Kubernetes monitors such as Prometheus would provide some of this.  Developing the complete suite for logging and metrics collection is out of scope of SSL, but maybe provide a few standard tools and a repository to collect notes on best practice.
+
+There were comments that not everyone in our group knows how to build a Helm chart, the (current) defacto standard for Kubernetes deployments. While that is true, often the stuff we are all working on is going to fit into a Helm chart eventually - so there is something to be said for being able to at least use it. Docker/desktop can run kubernetes and I don’t know how hard it is to make a flexible chart that can scale from a single node cluster to many, but this means that the person working on the component can basically run it in the environment they will eventually have to run in. Generally it was agreed the burden would be to the R\&D areas to define the metrics and guide SSL on what data to retain.  
+
+We discussed SSL {\bf service Level agreements} between research teams and the SSL; their role and utility for setting developer and resource provider expectations.  Some ideas included agreement to publish deployment artifacts; ability to request time and scheduling for scalability tests;  agreement the needed information is agreed upon before devoting significant resources.
+
+Opportunities \& planning for resources was discussed.  Should there be regions of the SSL where clusters nearby are logically group or technically joined via a federation or mesh software. It was agreed that successful contributins would rely on tools that allow operators the ability to re-create SSL environments at another location.  Specific initial sites discussed included:
+\begin{itemize}
+  \item NCSA: the ISL (Integrated Systems Lab), the Openstack cluster, Blue Waters (a short term allocation), the Illinois Campus Cluster (opportunistic use of GPUs), and an NSF MRI Deep Learning research platform
+  \item Redhat (Openshift) - there is the Massachusetts Open Cloud
+  \item CERN
+  \item NYU
+  \item Fermilab
+  \item BNL
+  \item SDSC and the Pacific Research Platform
+\end{itemize}
+
+
+\subsection{Day 2 Breakout Session}
 On day 2 we broke into two groups for more detailed discussion.  The first examined specific issues related requirements from AS year 2 plan.  The second on SSL infrastructure and identifying the impactful path moving forward.
 
 \subsubsection{Analysis Systems Breakout}
