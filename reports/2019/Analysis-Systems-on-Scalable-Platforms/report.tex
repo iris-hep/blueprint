@@ -308,17 +308,57 @@ The following discussion focused on answering the following question: {\it What 
 \begin{itemize}
   \item {\it Lowering barriers for participation in analysis systems} that are currently under development. This includes clear and thorough documentation, particularly the devalopment and maintenance of workuing examples
   \item {\it Empowering small groups with limited physical infrastructure and personnel to contribute meaningfully to data analysis}. There are growing concerns within the HEP communitiy that it is becoming increasingly difficult for single-PI groups to make a strong impact to physics papers on the large experiments. This issue is on the radar screen of the agencies as well and touches on challenges around diversity and outreach. It was pointed out that one way to address this challenge is to streamline the process of onboarding and transfer ("forward evolution") of analyses. As an example, RECAST represented a new style of doing analysis which CERN cloud servies facilitated. Similarly, there are \href{https://gitlab.cern.ch/aml/containers/docker}{ATLAS base Docker images} for machine learning. If SSL can provide these types of services quickly it would move forward critically-needed developments in this area.
-  \item {\it Establishing mechanisms for SSL to coordinate with campus IT efforts to replicate working environments} For example, NYU and k8 research clusters were proposed to test this paradigm. This activity could also inform the future evolution of the Tier-2s.
+  \item {\it Establishing mechanisms for SSL to coordinate with campus IT efforts to replicate working environments} For example, NYU and k8 research clusters were proposed to test this paradigm. This activity could also inform the future evolution of the Tier-2s. It was commented that Openshift is popular in large part becuase it makes Kubernates easy to deploy and work (and that CVMFS works on Kubernates)
   \item {\it SSL as a matchmaker and hub for relationships} of analyzers and developers.
   \item {\it BinderHub connected to SSL authentication} as one of the capabilities in the SSL service catalogue. A
-  \href{https://mybinder.org/}{Binder} example is the \href{https://mybinder.org/v2/gh/diana-hep/pyhf/master?filepath=docs%2Fexamples%2Fnotebooks%2Fbinderexample%2FStatisticalAnalysis.ipynb}{pyhf example stat analysis}. 
+  \href{https://mybinder.org/}{Binder} example is the \href{https://mybinder.org/v2/gh/diana-hep/pyhf/master?filepath=docs%2Fexamples%2Fnotebooks%2Fbinderexample%2FStatisticalAnalysis.ipynb}{pyhf example stat analysis}.
 
 \end{itemize}
 
 \subsubsection{SSL Infrastructure Breakout}
+The SSL Infrastructure breakout session was lead by Rob Gardner who began with a discussion of the Y1Q4/Y2 SSL milestones and development of an SSL roadmap, which included: \\
+Y1Q4
+\begin{itemize}
+  \item Roadmap of initial cyberinfrastructure components from AS.
+  \item SSL substrate project (see below)
+  \item REANA service deployed (with HELM charts)
+  \item ServiceX deployed (gke->ssl procedure defined)
+\end{itemize}
+Y2Q1
+\begin{itemize}
+  \item A general app monitoring, benchmarking, metrics collection service
+  \item A model for next generation Tier2s \& Tier3s
+  \item HEPIX, Oct 14-18: https://indico.cern.ch/event/810635/abstracts/
+  \item Presentation at CHEP
+\end{itemize}
+Y2Q2
+\begin{itemize}
+  \item Further engagement with SSL clients, including reservation scheduling
+\end{itemize}
 
+\vspace{0.1cm}\noindent
+\textit{\underline{SSL Substrate Project}} \\
+A key idea developed at the workshop was to deploy SSL resources as set of clusters based on kubernetes. In this way, various contanerized SSL applications could be deployed on SSL resources in a flexible and nimble manner. The first step is deploy a set of kubernetes clusters ("substrate") that participate in SSL - i.e. build out a thin k8s substrate layer from contributed resources.
 
+Proposed partners (with contact persons) include
+\begin{itemize}
+  \item Chicago (River - Lincoln/Andrew)
+  \item Illinois (Illinois Campus Cluster (ICC) - Tim Borner)
+  \item New York (legacy T3 \& research tech’s k8 cluster)
+  \item San Diego (campus k8s + PRP + UCIrvine - Edgar)
+  \item CERN (coordinate with existing patterns and successes)
+  \item Princeton (to be developed)
+  \item Fermilab (Glen Cooper, Liz, … to be developed)
+  \item BNL (to be developed, challenges)
+\end{itemize}
 
+%\vspace{0.1cm}\noindent
+%\textit{\underline{SSL Service-Level Agreement}} \\
+%The
+
+%\vspace{0.1cm}\noindent
+%\textit{\underline{SSL Reource Scheduling}} \\
+%An
 
 \section{Action Items}
 The following action items were identified:
@@ -336,7 +376,8 @@ The following action items were identified:
 \end{itemize}
 
 \section{Summary}
-\blindtext[2]
+The SSL/AS Blueprint meeting was focused on planning for the Scalable Systems Laboratory and requirements for supporting the Analysis Systems area to achieve the Y2 R\&D deliverables and milestones. The meeting also included discussion with and talks from computer scientists (e.g. A. Chien on accelerated data delivery), industry partners (e.g. Google, Redhat) and resource providers at universities and HPC centers with whom we are engaging for SSL resources. The second (half) day was dedicated to splitting into working groups to develop the meeting outcomes and next steps, which were captured in a google doc and are being synthesized into a short report for dissemination. At the very end of the meeting, attendees were asked to reflect on what transpired over the day and half and provide feedback for what could be improved in future Blueprint meetings. Based on the feedback received, the meeting was very successful and generated a number of new ideas such as a “kubernetes substrate” project for SSL and detailed planning for AS area activities (e.g. the collection and curation of example analysis use cases with reference implementations and the development of initial specifications for user-user-facing interfaces to AS components).
+
 
 \appendix
 \newpage
