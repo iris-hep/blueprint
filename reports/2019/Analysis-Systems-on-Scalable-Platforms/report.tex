@@ -29,6 +29,8 @@ colorlinks, citecolor=blue, filecolor=black, linkcolor=blue, urlcolor=blue}
 
 % Add you own definitions here (file report-defs.sty).
 \usepackage{report-defs}
+%\setlength{\headheight}{130pt}% ...at least 51.60004pt
+\usepackage{tikzpagenodes}
 
 %-------------------------------------------------------------------------------
 %   TITLE SECTION
@@ -36,7 +38,9 @@ colorlinks, citecolor=blue, filecolor=black, linkcolor=blue, urlcolor=blue}
 
 \date{} % blank out date from fancyhdr
 
-\pretitle{\vspace{-50pt} \begin{flushleft} \fontsize{15}{15} \usefont{OT1}{phv}{b}{n} \selectfont} % Horizontal rule before the title
+\pretitle{
+\vspace{-50pt}
+\begin{flushleft} \fontsize{15}{15} \usefont{OT1}{phv}{b}{n} \selectfont} % Horizontal rule before the title
 \title{\large Summary of Blueprint Workshop: \\
 \vspace{1pt}
 %\color{red}
@@ -77,8 +81,11 @@ Meeting URL: \href{https://indico.cern.ch/event/820946/}{https://indico.cern.ch/
 
 \thispagestyle{firststyle}
 
-\vspace{-45pt}
+\vspace{-250pt}
+\hspace{360pt}
+\includegraphics[height=30mm]{../../../figures/iris-hep-bluprint-logo.png}
 
+\vspace{120pt}
 \section*{Major Goals}
 \vspace{3pt}
 \begin{itemize}
@@ -102,7 +109,7 @@ Meeting URL: \href{https://indico.cern.ch/event/820946/}{https://indico.cern.ch/
 %-------------------------------------------------------------------------------
 
 \newpage
-\thispagestyle{reststyle}
+\pagestyle{reststyle}
 
 \section{Overview}
 Together with the OSG-LHC, the Scalable Systems Laboratory (SSL) is designed to assist integration and delivery of IRIS-HEP R\&D products targeted for the distributed and scientific production infrastructure of the experiments. The aim of this workshop is to further develop the IRIS-HEP SSL concept using specific R\&D examples from the AS area, including  low-latency, query-based data systems and modular, reusable cyberinfrastructure for physics inference and results dissemination. Registered attendees included those from IRIS-HEP (primarily SSL and AS areas), US ATLAS/CMS operations programs, DOE national labs, CERN, supercomputing centers (SDSC, NCSA), university research IT organizations, and industry (RedHat, Google).
@@ -136,7 +143,7 @@ Stephen Fang (Google),
 Stratos Efstathiadis (NYU),
 Tatiana Polunina (NYU),
 Tim Boerner (Illinois/NCSA),
-Wei Yang (SLAC).  Besides IRIS-HEP team members from AS and SSL, US LHC computing operations program management was solicited in advance to send representatives from program areas with overlapping interests (e.g. analysis framework developers, infrastructure providers).  
+Wei Yang (SLAC).  Besides IRIS-HEP team members from AS and SSL, US LHC computing operations program management was solicited in advance to send representatives from program areas with overlapping interests (e.g. analysis framework developers, infrastructure providers).
 
 
 \section{Goals}
