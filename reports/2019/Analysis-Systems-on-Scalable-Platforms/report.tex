@@ -101,7 +101,7 @@ Meeting URL: \href{https://indico.cern.ch/event/820946/}{https://indico.cern.ch/
 \begin{itemize}
   \item Communication of the AS area plans and a preliminary set of requirements to SSL team.
   \item Kubernetes identified as a planned {\it common denominator} technology for the SSL, increasing innovation capability through flexible infrastructure.  This idea spawned plans for a multi-site SSL {\it substrate} project that will federate SSL contributions from multiple resource providers (institutes and public cloud), offering the AS area a flexible platform for service deployment at scales needed to test the viability of system designs.
-  \item Productive engagement of the AS/SSL team with representatives from NCSA, SDSC, NYU Research Computing, industry \& cloud providers (Google, Redhat), generating action items and informing year 2 planning of IRIS-HEP.
+  \item Productive engagement of the AS/SSL team with representatives from NCSA, SDSC, NYU Research Computing, industry \& cloud providers (Google, Redhat), generating action items and informing Year 2 planning of IRIS-HEP.
   \item A concrete vision for an SSL that serves not only as an innovation space for AS developers, but as a testbed to prototype next generation infrastructure patterns for future HEP computing environments.
 
 \end{itemize}
@@ -112,12 +112,14 @@ Meeting URL: \href{https://indico.cern.ch/event/820946/}{https://indico.cern.ch/
 \pagestyle{reststyle}
 
 \section{Overview}
-Together with the OSG-LHC, the Scalable Systems Laboratory (SSL) is designed to assist integration and delivery of IRIS-HEP R\&D products targeted for the distributed and scientific production infrastructure of the experiments. The aim of this workshop is to further develop the IRIS-HEP SSL concept using specific R\&D examples from the AS area, including  low-latency, query-based data systems and modular, reusable cyberinfrastructure for physics inference and results dissemination. Registered attendees included those from IRIS-HEP (primarily SSL and AS areas), US ATLAS/CMS operations programs, DOE national labs, CERN, supercomputing centers (SDSC, NCSA), university research IT organizations, and industry (RedHat, Google).
+Together with the OSG-LHC, the Scalable Systems Laboratory (SSL) is designed to assist integration and delivery of IRIS-HEP R\&D products targeted for the distributed and scientific production infrastructure of the experiments. The aim of this workshop is to further develop the IRIS-HEP SSL concept using specific examples from the Analysis Systems (AS) R\&D area, including low-latency, query-based data analyis systems and modular, reusable cyberinfrastructure for parameter fitting, physics inference and results dissemination. Registered attendees included those from IRIS-HEP (primarily from the SSL and AS focus areas), US ATLAS/CMS operations programs, DOE national and CERN laboratories, supercomputing centers (SDSC, NCSA), university research IT organizations, and industry (RedHat, Google).
 
-The venue for the workshop was the Physics Department at New York University and was hosted by Kyle Cranmer.  The blueprint meeting benefited by its proximity to the IRIS-HEP \href{https://indico.cern.ch/event/822074/}{Analysis Systems Topic Workshop} which immediately proceeded it and the \href{https://indico.cern.ch/event/765245/}{ATLAS Software and Computing Week} which followed, all three events hosted by NYU.
+The venue for the Blueprint workshop was the Physics Department at New York University (NYU) and was hosted by Kyle Cranmer who is a member of the NYU faculty an the IRIS-HEP Analysis Systems Coordinator. The workshop benefited from its proximity to the IRIS-HEP \href{https://indico.cern.ch/event/822074/}{Analysis Systems Topic Workshop} which immediately proceeded it and the \href{https://indico.cern.ch/event/765245/}{ATLAS Software and Computing Week} which directly followed -- all three events were hosted by NYU in a span of two weeks at the end of June 2019.
 
 \section{Attendees}
-There were 26 \href{https://indico.cern.ch/event/820946/registrations/participants}{registered participants} for workshop, with all but a few attending in person. The workshop attendees were:
+There were 26 \href{https://indico.cern.ch/event/820946/registrations/participants}{registered participants} for workshop, with all but a few attending in person. The US ATLAS and US CMS computing operations and physics support managers were solicited in advance to send representatives from program areas with related interests, such as analysis framework developers and infrastructure providers.
+
+The workshop attendees were:
 Andrew Chien (Chicago),
 Andrew Melo (Vanderbilt),
 Aravindh Puthiyaparambil (Red Hat),
@@ -143,26 +145,24 @@ Stephen Fang (Google),
 Stratos Efstathiadis (NYU),
 Tatiana Polunina (NYU),
 Tim Boerner (Illinois/NCSA),
-Wei Yang (SLAC).  Besides IRIS-HEP team members from AS and SSL, US LHC computing operations program management was solicited in advance to send representatives from program areas with overlapping interests (e.g. analysis framework developers, infrastructure providers).
-
+Wei Yang (SLAC).
 
 \section{Goals}
-The primary goals of the workshop were to
+As an IRIS-HEP Blueprint activtiy, the workshop was broadly designed to inform the development and evolution of the Institute’s strategic vision by bringing together team members, key stakeholders and domain experts from disciplines of importance to the Institute's mission. Specific to the workshop theme of \textit{Analysis System R\&D on Scalable Platforms}, the organizers set forth several goals in advance of the workshop. The key goals of the workshop were to:
 
 \begin{itemize}
-  \item Review the status of AS milestones and deliverables from a perspective of needs for a collaborative development and testing platform.
-  \item Develop the Scalable Systems Laboratory (SSL) scope, architecture and plans, using Analysis Systems (AS) R\&D activities as concrete examples.
-  \item Develop requirements on SSL to support the AS area, particularly the prototyping, benchmarking and scaling of AS deliverables toward deployment.
-  \item Increase the visibility of SSL and AS R\&D beyond IRIS-HEP to facilitate partnerships with organizations that could potentially provide software and computing resources for SSL.
-  \item Get informed on latest developments in technologies and methods relevant for SSL and AS.
+  \item Review the status of Analysis Systems (AS) milestones and deliverables to identify the needs for collaborative development and testing platforms in the AS R\&D area.
+  \item Further develop the Scalable Systems Laboratory (SSL) concept, scope, architecture and plans, using R\&D activities from the AS area as specific examples.
+  \item Develop requirements on SSL to support the AS area, particularly the prototyping, benchmarking and scaling of AS deliverables toward deploying and integrating within the LHC experiments.
+  \item Increase the visibility of SSL and AS R\&D area beyond IRIS-HEP to facilitate partnerships with organizations that could potentially provide software and computing resources for SSL.
+  \item Extend knoweledge within the Institute of current developments in technologies and methods relavent for SSL and the AS R\&D area from participation by scientists in other domains and industry partners.
 \end{itemize}
 
-Significant progress was made towards each of these goals over the 1.5 day meeting.
-
+Significant progress was made towards each of these goals over the 1.5 day workshop. The Blueprint meeting itself satisfied an AS area milestone, namely Milestone {\bf G2.5} "Blueprint workshop coordinating resource needs for evaluating analysis systems coordinated by SSL with participation of operations program" under WBS 2.3 of the IRIS-HEP \textit{Project Execution Plan}.
 
 \section{Activites}
 
-The meeting was structured as a series of informal presentations allowing sufficient time for in-depth discussions during and after.  In advance of the meeting we identified some questions to guide discussions:
+The meeting was structured as a series of informal presentations and discussion blocks to allow sufficient time for in-depth discussions.  In advance of the meeting, we identified a number of questions and topics to guide the discussions, including:
 
 \begin{itemize}
   \item Collection of analysis use cases, each with a reference implementation.  What patterns and infrastructure are needed?
@@ -175,14 +175,41 @@ The meeting was structured as a series of informal presentations allowing suffic
 
 \subsection{Presentations and Discussion}
 
-There were eight presentations chosen to trigger discussion on the main themes and objectives of the workshop.
+There were 10 presentations chosen to trigger discussion on the main themes and objectives of the workshop.
 
+\vspace{0.1cm}
+
+\noindent~~$\bullet$~\textbf{\textit{IRIS-HEP Blueprint Concepts and Process}} (Mark Neubauer)
+
+\noindent~~~$\bullet$~\textbf{\textit{Scalable Systems Laboratory (IRIS-HEP) - challenges, opportunities}} (Rob Gardner)
+
+\noindent~~~$\bullet$~\textbf{\textit{Analysis Systems Perspectives \& Goals}} (Kyle Cranmer)
+
+\noindent~~~$\bullet$~\textbf{\textit{SSL patterns: hybrid models, developer support, deployments}} (Lincoln Bryant)
+
+\noindent~~~$\bullet$~\textbf{\textit{HEP Use of the Google Cloud Platform}} (Lukas Heinrich)
+
+\noindent~~~$\bullet$~\textbf{\textit{RedHat OpenShift}} (Sanjay Arora)
+
+\noindent~~~$\bullet$~\textbf{\textit{Google Perspective}} (Stephan Fang)
+
+\noindent~~~$\bullet$~\textbf{\textit{Research Computing Technology at NYU}} (David Ackerman)
+
+\noindent~~~$\bullet$~\textbf{\textit{Accelerated Systems and Optimization}} (Andrew Chien)
+
+\noindent~~~$\bullet$~\textbf{\textit{ServiceX Architure}} (Ben Galewsky).
 
 \subsubsection{The Blueprint Process}
 Mark Neubauer (University of Illinois) presented {\it IRIS-HEP Blueprint Concepts and Process} which provided a broad overview of not only the blueprint process but the data and processing challenge to set the context. This was particularly helpful for workshop participants new to computing in HEP and the HL-LHC computing scale.
 
 \subsubsection{The SSL Concept}
-Robert Gardner (UChicago) presented {\it Scalable Systems Laboratory (IRIS-HEP) - challenges, opportunities}.  The initial program of work of the SSL activity was described.  Given the SSL core has less than one FTE of effort, success will depend on leveraged efforts from other areas of IRIS-HEP and engaged partners. The high level purpose of the SSL is to provide the Institute and the HL-LHC experiments with scalable platforms needed for development in context, i.e. the {\it path to production}. The SSL:
+Robert Gardner (UChicago) presented {\it Scalable Systems Laboratory (IRIS-HEP) - challenges, opportunities}.
+\begin{wrapfigure}[21]{R}{0.48\textwidth}
+  \includegraphics[width=0.99\linewidth]{figures/rwg_ssl.jpg}
+  \caption{Rob Gardner presents the Scalable Systems concept on Day 1 of the workshop.}
+  \label{fig:rwg_ssl}
+\end{wrapfigure}
+The initial program of work of the SSL activity was described.  Given the SSL core has less than one FTE of effort, success will depend on leveraged efforts from other areas of IRIS-HEP and engaged partners. The high level purpose of the SSL is to provide the Institute and the HL-LHC experiments with scalable platforms needed for development in context, i.e. the {\it path to production}. The SSL:
 
 \begin{itemize}
   \item Provides access to infrastructure and environments
@@ -196,7 +223,6 @@ The challenges are that it must be a community platform across experiments and i
 The opportunities presented to the community are that in building out the SSL, ad-hoc collaborations will be formed which cross organizational boundaries; contributions will come from diverse resource providers, broadening participation; new models of infrastructure development will be discovered supporting more rapid innovation of analysis systems; and that having catalogs of service artifacts capable of patterned redeployments in open, robust orchestration systems should accelerate delivery of R\&D products for use in production.
 
 It was noted that storage, processing and networking become significant challenges for the relevant scale testing needed, and so how does the SSL provision accordingly? The possibility of augmenting existing on-premise resources with public cloud was discussed, with examples cited such as a recent million core-scale computation by an MIT researcher.  This led to a general discussion of cost comparisons between institutional providers and public cloud. It was agreed with any test all options should be considered and costs periodically assessed.  Additionally, research partnerships where there is mutual interest with public cloud providers should continue to be exploited.  Finally, it was noted that specifics of the server/instance targets need to be considered, such as memory/core and I/O bandwidth which could pose special challenges and costs.
-
 
 \subsubsection{Analysis Systems}
 Kyle Cranmer (NYU) presented {\it Analysis Systems Perspectives \& Goals}.  The just finished \href{https://indico.cern.ch/event/822074/}{Analysis Systems Topic Workshop} revisited the milestones and deliverables for the rest of IRIS-HEP Year 1 and and Year 2 planning.  It was noted there are AS scalbility milestones in Y2Q1 which imply requirements on SSL readiness,  The goal is to move testing on whatever resources currently in use to an {\it SSL-managed} infrastructure.
@@ -235,6 +261,12 @@ Suggested were some light-weight mechanisms for discovery of resources.   The va
 
 There were questions as to whether the SSL provisioning method, dashboard panels, and other tools developed to materialize and manage the service infrasructure would be open sourced and productized?  These were interesting possibilities and would depend on the level of effort and other priorities.
 
+%\begin{wrapfigure}[21]{R}{0.48\textwidth}
+\begin{figure}
+  \includegraphics[width=0.69\linewidth]{figures/galewsky_servicex.jpg}
+  \caption{Ben Galewsky presents on the ServiceX system on Day 2 of the workshop.}
+  \label{fig:galewsky_servicex}
+\end{figure}
 
 \subsubsection{Experience with Google Cloud Platform}
 
@@ -244,10 +276,8 @@ Lukas Heinrich (CERN) presented {\it Ecosystems I: Google Cloud Platform}.  The 
 
 Sanjay Arora (RedHat) presented {\it Ecosystems II: RedHat OpenShift}.  \href{https://www.openshift.com/}{OpenShift} is distribution of Kubernetes that makes on-prem clusters easier to deploy and maintain.  The model is similar to RedHat release of Linux, and there is an open source equivalent to CentOS for OpenShift: \href{https://www.okd.io/}{OKD}.  If Kubernetes is to play a central role in a re-engineered WLCG computing infrastructure, its distribution and management could benefit from solutions such as these and similar.
 
-
 %\subsubsection{Perspectives from University Resource Providers}
 %David Ackerman (CIO, NYU) presented {\it Resource providers: university perspectives}.
-
 
 \subsubsection{Accelerated Systems}
 
@@ -266,6 +296,14 @@ Throughout the presentation a number of {\it dimensions of benefit} involving sy
   \item Reduces Data Center network load
 \end{itemize}
 
+%\begin{wrapfigure}[22]{R}{0.48\textwidth}
+
+\begin{figure}
+\centering
+  \includegraphics[width=0.89\linewidth]{figures/google.jpg}
+  \caption{Stephen Fang presents on the Google system on Day 2 of the workshop.}
+  \label{fig:google}
+\end{figure}
 
 \subsection{Afternoon Discussion}
 
