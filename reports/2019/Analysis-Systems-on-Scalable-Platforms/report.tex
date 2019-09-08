@@ -150,13 +150,14 @@ Tim Boerner (Illinois/NCSA),
 Wei Yang (SLAC).
 
 \section{Goals}
+\label{sec:Goals}
 \vspace{0.2cm}
 As an IRIS-HEP Blueprint activtiy, the workshop was broadly designed to inform the development and evolution of the Institute’s strategic vision by bringing together team members, key stakeholders and domain experts from disciplines of importance to the Institute's mission. Specific to the workshop theme of \textit{Analysis System R\&D on Scalable Platforms}, the organizers set forth several goals in advance of the workshop. The key goals of the workshop were to:
 
 \begin{itemize}
   \item Review the status of Analysis Systems (AS) milestones and deliverables to identify the needs for collaborative development and testing platforms in the AS R\&D area.
   \item Further develop the Scalable Systems Laboratory (SSL) concept, scope, architecture and plans, using R\&D activities from the AS area as specific examples.
-  \item Develop requirements on SSL to support the AS area, particularly the prototyping, benchmarking and scaling of AS deliverables toward deploying and integrating within the LHC experiments.
+  \item Develop requirements on SSL to support the AS area, particularly the prototyping, benchmarking and scaling of AS deliverables toward integrating within the LHC experiments.
   \item Increase the visibility of SSL and AS R\&D area beyond IRIS-HEP to facilitate partnerships with organizations that could potentially provide software and computing resources for SSL.
   \item Extend knoweledge within the Institute of current developments in technologies and methods relavent for SSL and the AS R\&D area from participation by scientists in other domains and industry partners.
 \end{itemize}
@@ -202,29 +203,41 @@ There were 9 formal presentations delivered to trigger discussion on the main th
 
 \vspace{-0.2cm}
 During the afternoon session, Ben Galewsky (Illinois/NCSA) presented an architectural diagram, some ideas about implemntation, and current status of ServiceX, which is aimed at accelerated delivery of data (often transformed) for analysis as part of the Intelligent Data Delivery Service (iDDS) (see Figure~\ref{fig:galewsky_servicex}). The iDDS was conceived in the
-\begin{wrapfigure}[24]{R}{0.48\textwidth}
-  \includegraphics[width=0.99\linewidth]{figures/galewsky_servicex.jpg}
-  \caption{Ben Galewsky (Illinois/NCSA) presents on an accelerated delivery and transformation service for analysis data (ServiceX) as part of the Intelligent Data Delivery Service (iDDS) on Day 2 of the workshop.}
+\begin{wrapfigure}[21]{R}{0.47\textwidth}
+  \centering
+  \includegraphics[width=0.9\linewidth]{figures/galewsky_servicex.jpg}
+  \vspace{-0.3cm}
+  \caption{Ben Galewsky (Illinois) presents on an accelerated delivery and transformation service for analysis data (ServiceX) as part of the Intelligent Data Delivery Service (iDDS).}
   \label{fig:galewsky_servicex}
 \end{wrapfigure}
 conceptualization phase of IRIS-HEP and developed as an early R\&D target in the Data Organization, Management and Access area.
 
-In the afternoon discussion block, participants identified potential contributing partners to SSL along with specific resource targets, where applicable. Representative(s) from potential partner sites were present in some cases, for example Tim Boerner at the National Center for Supercomputing Applications and Edgar Fajardo at the San Diego Supercomputing Center. The group engaged in something of a round table among them to affirm their interests in working with SSL to and discuss their capabilities.
+In the afternoon discussion block, participants identified potential contributing partners to SSL along with specific resource targets, where applicable. Representative(s) from potential partner sites were present in some cases, for example Tim Boerner at the National Center for Supercomputing Applications and Edgar Fajardo at the San Diego Supercomputing Center. The group engaged in something of a round table those in attendence to affirm their interests in working with SSL, discuss their capabilities and develop plans for making their resources available to IRIS-HEP.
 
 \subsubsection{The Blueprint Process}
 \vspace{0.2cm}
-Mark Neubauer (Illinois) presented \href{https://indico.cern.ch/event/820946/contributions/3461588/attachments/1866577/3069573/IRIS-HEP_BluePrint_AS_SSL.pdf}{\it IRIS-HEP Blueprint Concepts and Process} which provided a broad overview of the goals of particles and the LHC experiments, including the technical and computing challenges they will face in the HL-LHC era and the role that software will play in addressing those challenges. The IRIS-HEP Blueprint history, activity and process were presented and followed by a discussion of the major goals for the AS/SSL Blueprint Workshop. Feedback was reeived that this overview was particularly helpful to workshop participants new to computing in HEP and the scale of the HL-LHC computing challenges, helping put the data and processing challenges in context.
+Mark Neubauer (Illinois) presented \href{https://indico.cern.ch/event/820946/contributions/3461588/attachments/1866577/3069573/IRIS-HEP_BluePrint_AS_SSL.pdf}{\it IRIS-HEP Blueprint Concepts and Process} which provided a broad overview of the goals of particles and the LHC experiments, including the technical and computing challenges they will face in the HL-LHC era and the role that software will play in addressing those challenges. A brief history of the Blueprint activity in development of the Institute was presented, along with a description of process by which it informs the development and evolution of the strategic vision and the roll it plays in IRIS-HEP as an intellectual hub for HEP software \& computing (see Figure~\ref{fig:overview}). This was followed by a discussion of the major major goals for the AS/SSL Blueprint Workshop. \begin{wrapfigure}[19]{R}{0.47\textwidth}
+  \centering
+  \vspace{-0.4cm}
+  \includegraphics[width=0.99\linewidth]{figures/AS_SSL_IRIS-HEP.png}
+  \vspace{-0.7cm}
+  \caption{Overview of the IRIS-HEP areas, with AS and SSL as the focus of this Blueprint Workshop indicated with blue boxes.}
+  \label{fig:overview}
+\end{wrapfigure}
 
-\subsubsection{The Scalable Systems Laboratory Concept}
+Feedback was reeived that this overview was particularly helpful to workshop participants new to computing in HEP and unaware of the scale of the HL-LHC computing challenges, helping put the data and processing challenges in context.
+
+\subsubsection{The SSL Concept}
 \vspace{0.2cm}
 Robert Gardner (Chicago) presented \href{https://indico.cern.ch/event/820946/contributions/3461590/attachments/1866979/3070394/2019.06.21_SSL_Overview_Rob.pdf}{\textit Scalable Systems Laboratory: Challenges, \& Opportunities} in which the concept was discussed and the initial program of work was described (Figure~\ref{fig:rwg_ssl}). Given that
-\begin{wrapfigure}[21]{R}{0.48\textwidth}
+\begin{wrapfigure}[21]{L}{0.48\textwidth}
   \includegraphics[width=0.99\linewidth]{figures/rwg_ssl.jpg}
   \caption{Rob Gardner (Chicago) presents on the Scalable Systems Laboratory concept on Day 1 of the workshop.}
   \label{fig:rwg_ssl}
 \end{wrapfigure}
-(at the time of writing) the SSL core has less than one FTE of funded effort, success will depend critically on leveraging efforts from other areas of IRIS-HEP and engaged partners. The high level purpose of the SSL is to provide the Institute and the HL-LHC experiments with scalable platforms needed for development in context, i.e. the {\textit path to production}. The SSL:
+(at the time of writing) the SSL core has less than one FTE of funded effort, success will depend critically on leveraging efforts from other areas of IRIS-HEP and engaged partners. The high-level purpose of the SSL is to provide the Institute and the HL-LHC experiments with scalable platforms needed for development in context, i.e. the {\textit path to production} use within the experiments, as illustrated in Figure~\ref{fig:overview}.
 
+As presented in Section~\ref{sec:Goals}, one of the goals of the AS/SSL Blueprint workshop was to further develop the SSL concept, scope and architecture. These were presented in Gardner's talk and informed by the subsequent discussions at the workshop. The SSL will be designed to:
 \begin{itemize}
   \item Provides access to infrastructure and environments
   \item Organizes software and resources for scalability testing
