@@ -231,7 +231,9 @@ Feedback was reeived that this overview was particularly helpful to workshop par
 \vspace{0.2cm}
 Robert Gardner (Chicago) presented \href{https://indico.cern.ch/event/820946/contributions/3461590/attachments/1866979/3070394/2019.06.21_SSL_Overview_Rob.pdf}{\textit Scalable Systems Laboratory: Challenges, \& Opportunities} in which the concept was discussed and the initial program of work was described (Figure~\ref{fig:rwg_ssl}). Given that
 \begin{wrapfigure}[21]{L}{0.48\textwidth}
+  \vspace{-0.4cm}
   \includegraphics[width=0.99\linewidth]{figures/rwg_ssl.jpg}
+  \vspace{-0.7cm}
   \caption{Rob Gardner (Chicago) presents on the Scalable Systems Laboratory concept on Day 1 of the workshop.}
   \label{fig:rwg_ssl}
 \end{wrapfigure}
@@ -239,15 +241,24 @@ Robert Gardner (Chicago) presented \href{https://indico.cern.ch/event/820946/con
 
 As presented in Section~\ref{sec:Goals}, one of the goals of the AS/SSL Blueprint workshop was to further develop the SSL concept, scope and architecture. These were presented in Gardner's talk and informed by the subsequent discussions at the workshop. The SSL will be designed to:
 \begin{itemize}
-  \item Provides access to infrastructure and environments
-  \item Organizes software and resources for scalability testing
-  \item Does foundational systems R\&D on accelerated services
-  \item Provides the integration path to the production infrastructure of the experiments
+  \item Provide access to software and computing infrastructure and environments
+  \item Organize software and resources for scalability testing
+  \item Provide foundational systems R\&D on accelerated services
+  \item Provide the integration path to the production infrastructure of the experiments
 \end{itemize}
+The SSL elements and role within IRIS-HEP and broader ecosystem are shown in Figure~\ref{fig:ssl}.
 
-The challenges are that it must be a community platform across experiments and institutions; it should support groups (and projects) with specific organizational membership for access to resources with the appropriate level of permission; it must aggregate {\it bespoke} resources \& configurations; it must do so in {\it declarative} fashion such that deployments are reproducible and {\it mobile}; it must provide services to build \& manage deployment artifacts; and it must be scalable up and down as testing activities are episodic in nature.
+Among the challenges for SSL is that it must be a community platform across experiments and institutions -- it should support groups (and projects) with specific organizational membership for access to resources with the appropriate level of permission; it must aggregate {\it bespoke} resources \& configurations; it must do so in {\it declarative} fashion such that deployments are reproducible and {\it mobile}; it must provide services to build \& manage deployment artifacts; and it must be scalable up and down as testing activities are episodic in nature.
 
 The opportunities presented to the community are that in building out the SSL, ad-hoc collaborations will be formed which cross organizational boundaries; contributions will come from diverse resource providers, broadening participation; new models of infrastructure development will be discovered supporting more rapid innovation of analysis systems; and that having catalogs of service artifacts capable of patterned redeployments in open, robust orchestration systems should accelerate delivery of R\&D products for use in production.
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=0.99\linewidth]{figures/ssl.png}
+  \vspace{-0.3cm}
+  \caption{Schematic diagram of SSL elements and role within IRIS-HEP and broader ecosystem.}
+  \label{fig:ssl}
+\end{figure}
 
 It was noted that storage, processing and networking become significant challenges for the relevant scale testing needed, and so how does the SSL provision accordingly? The possibility of augmenting existing on-premise resources with public cloud was discussed, with examples cited such as a recent million core-scale computation by an MIT researcher.  This led to a general discussion of cost comparisons between institutional providers and public cloud. It was agreed with any test all options should be considered and costs periodically assessed.  Additionally, research partnerships where there is mutual interest with public cloud providers should continue to be exploited.  Finally, it was noted that specifics of the server/instance targets need to be considered, such as memory/core and I/O bandwidth which could pose special challenges and costs.
 
