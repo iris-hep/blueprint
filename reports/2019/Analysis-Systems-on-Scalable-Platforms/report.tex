@@ -41,7 +41,7 @@ colorlinks, citecolor=blue, filecolor=black, linkcolor=blue, urlcolor=blue}
 \pretitle{
 \vspace{-50pt}
 \begin{flushleft} \fontsize{15}{15} \usefont{OT1}{phv}{b}{n} \selectfont} % Horizontal rule before the title
-\title{\large Summary (Draft v0.1) of Blueprint Workshop: \\
+\title{\large Summary (Draft v0.9) of Blueprint Workshop: \\
 \vspace{1pt}
 %\color{red}
 \LARGE \textit{Analysis Systems R\&D on Scalable Platforms} \\
@@ -90,20 +90,21 @@ Meeting URL: \href{https://indico.cern.ch/event/820946/}{https://indico.cern.ch/
 \section*{Major Goals}
 \vspace{3pt}
 \begin{itemize}
-  \item Review the status of the Analysis Systems (AS) milestones and deliverables from a perspective of needs for a collaborative development and testing platform.
-  \item Develop the Scalable Systems Laboratory (SSL) scope, architecture and plans, using AS R\&D activities as concrete examples.
+  \item Review the status of the Analysis Systems (AS) milestones and deliverables to inform the needs for a collaborative development and testing platform.
+  \item Develop the Scalable Systems Laboratory (SSL) architecture and plans, using AS R\&D activities as specific examples.
   \item Develop requirements on SSL to support the AS area, particularly the prototyping, benchmarking and scaling of AS deliverables toward production deployment.
-  \item Increase the visibility of SSL and AS R\&D beyond IRIS-HEP to facilitate partnerships with organizations that could potentially provide software and computing resources toward these objectives.
-  \item Get informed on latest developments in open source technologies and methods relevant for SSL and AS.
+  \item Increase the visibility of SSL and AS beyond IRIS-HEP to facilitate partnerships with organizations that might provide software and computing resources toward these objectives.
+  \item Get informed on latest developments in open source technologies and methods important for the success of the SSL and AS R\&D areas of the Institute.
 \end{itemize}
 
 \section*{Key Outcomes}
 \vspace{3pt}
 \begin{itemize}
-  \item Communication of the AS area plans and a preliminary set of requirements to SSL team.
-  \item Kubernetes identified as a planned {\it common denominator} technology for the SSL, increasing innovation capability through flexible infrastructure.  This idea spawned plans for a multi-site SSL {\it substrate} project that will federate SSL contributions from multiple resource providers (institutes and public cloud), offering the AS area a flexible platform for service deployment at scales needed to test the viability of system designs.
-  \item Productive engagement of the AS/SSL team with representatives from NCSA, SDSC, NYU Research Computing, industry \& cloud providers (Google, Redhat), generating action items and informing Year 2 planning of IRIS-HEP.
-  \item A concrete vision for an SSL that serves not only as an innovation space for AS developers, but as a testbed to prototype next generation infrastructure patterns for future HEP computing environments.
+  \item Communication of the AS area plans leading to a set of requirements to SSL team.
+  \item Kubernetes identified as a planned {\it common denominator} technology for the SSL, increasing our innovation capability through flexible infrastructure.
+  \item Plans for a multi-site SSL {\it substrate project} that will federate SSL contributions from multiple resource providers (institutes and public cloud), offering the AS area a flexible platform for service deployment at scales needed to test the viability of system designs.
+  \item Productive engagement of the AS/SSL team with representatives from NCSA, SDSC, NYU Research Computing, industry \& cloud providers (Google, Redhat), generating actions and informing Year 2 planning of IRIS-HEP.
+  \item A vision for an SSL that serves as an innovation space for AS developers and a testbed to prototype next generation infrastructure patterns for future HEP computing environments.
 \end{itemize}
 
 %-------------------------------------------------------------------------------
@@ -113,9 +114,9 @@ Meeting URL: \href{https://indico.cern.ch/event/820946/}{https://indico.cern.ch/
 
 \section{Overview}
 \vspace{0.2cm}
-Together with the OSG-LHC, the Scalable Systems Laboratory (SSL) is designed to assist integration and delivery of IRIS-HEP R\&D products targeted for the distributed and scientific production infrastructure of the experiments. The aim of this workshop is to further develop the IRIS-HEP SSL concept using specific examples from the Analysis Systems (AS) R\&D area, including low-latency, query-based data analyis systems and modular, reusable cyberinfrastructure for parameter fitting, physics inference and results dissemination. Registered attendees included those from IRIS-HEP (primarily from the SSL and AS focus areas), US ATLAS/CMS operations programs, DOE national and CERN laboratories, supercomputing centers (SDSC, NCSA), university research IT organizations, and industry (RedHat, Google).
+Together with the OSG-LHC, the Scalable Systems Laboratory (SSL) is designed to assist integration and delivery of IRIS-HEP R\&D products targeted for the distribution and scientific production infrastructure of the stakeholder experiments. The aim of this workshop was to further develop the IRIS-HEP SSL concept using specific examples from the Analysis Systems (AS) R\&D area, including low-latency, query-based data analyis systems and modular, reusable cyberinfrastructure for parameter fitting, physics inference and results dissemination. Registered attendees included those from IRIS-HEP (primarily from the SSL and AS focus areas), US ATLAS/CMS operations programs, DOE national and CERN laboratories, supercomputing centers (SDSC, NCSA), university research IT organizations, and industry (RedHat, Google).
 
-The venue for the Blueprint workshop was the Physics Department at New York University (NYU) and was hosted by Kyle Cranmer who is a member of the NYU faculty an the IRIS-HEP Analysis Systems Coordinator. The workshop benefited from its proximity to the IRIS-HEP \href{https://indico.cern.ch/event/822074/}{Analysis Systems Topic Workshop} which immediately proceeded it and the \href{https://indico.cern.ch/event/765245/}{ATLAS Software and Computing Week} which directly followed -- all three events were hosted by NYU in a span of two weeks at the end of June 2019.
+The venue for the Blueprint workshop was the Physics Department at New York University (NYU) and was hosted by Kyle Cranmer who is a member of the NYU faculty and serves as the IRIS-HEP Analysis Systems Coordinator. The workshop benefited from its proximity in space and time to the IRIS-HEP \href{https://indico.cern.ch/event/822074/}{Analysis Systems Topic Workshop} which immediately preceeded it and the \href{https://indico.cern.ch/event/765245/}{ATLAS Software and Computing Week} which directly followed -- all three events were hosted by NYU in a span of two weeks at the end of June 2019.
 
 \section{Attendees}
 \vspace{0.2cm}
@@ -155,31 +156,33 @@ Wei Yang (SLAC).
 As an IRIS-HEP Blueprint activtiy, the workshop was broadly designed to inform the development and evolution of the Institute’s strategic vision by bringing together team members, key stakeholders and domain experts from disciplines of importance to the Institute's mission. Specific to the workshop theme of \textit{Analysis System R\&D on Scalable Platforms}, the organizers set forth several goals in advance of the workshop. The key goals of the workshop were to:
 
 \begin{itemize}
-  \item Review the status of Analysis Systems (AS) milestones and deliverables to identify the needs for collaborative development and testing platforms in the AS R\&D area.
-  \item Further develop the Scalable Systems Laboratory (SSL) concept, scope, architecture and plans, using R\&D activities from the AS area as specific examples.
-  \item Develop requirements on SSL to support the AS area, particularly the prototyping, benchmarking and scaling of AS deliverables toward integrating within the LHC experiments.
-  \item Increase the visibility of SSL and AS R\&D area beyond IRIS-HEP to facilitate partnerships with organizations that could potentially provide software and computing resources for SSL.
-  \item Extend knoweledge within the Institute of current developments in technologies and methods relavent for SSL and the AS R\&D area from participation by scientists in other domains and industry partners.
+  \item Review the status of the Analysis Systems (AS) milestones and deliverables to inform the needs for a collaborative development and testing platform.
+  \item Develop the Scalable Systems Laboratory (SSL) architecture and plans, using AS R\&D activities as specific examples.
+  \item Develop requirements on SSL to support the AS area, particularly the prototyping, benchmarking and scaling of AS deliverables toward production deployment.
+  \item Increase the visibility of SSL and AS beyond IRIS-HEP to facilitate partnerships with organizations that might provide software and computing resources toward these objectives.
+  \item Get informed on latest developments in open source technologies and methods important for the success of the SSL and AS R\&D areas of the Institute.
 \end{itemize}
 
 Significant progress was made towards each of these goals over the 1.5 day workshop. The Blueprint meeting itself satisfied an AS area milestone, namely Milestone {\bf G2.5} "Blueprint workshop coordinating resource needs for evaluating analysis systems coordinated by SSL with participation of operations program" under WBS 2.3 of the IRIS-HEP \textit{Project Execution Plan}.
 
 \section{Activites}
 \vspace{0.2cm}
-The meeting was structured as a series of informal presentations and discussion blocks to allow sufficient time for in-depth discussions.  In advance of the meeting, we identified a number of questions and topics to guide the discussions, including:
+The meeting was structured as a series of informal presentations and discussion blocks to allow for sufficient time for in-depth discussions.  In advance of the meeting, we identified a number of questions and topics to guide the discussions, including:
 
 \begin{itemize}
-  \item Collection of analysis use cases, each with a reference implementation.  What patterns and infrastructure are needed?
+  \item Collection of analysis use cases, each with a reference implementation.  \textit{What patterns and infrastructure are needed?}
   \item Translation of analysis examples into infrastructure environments providing feedback for development iterations.
   \item Development of initial specifications for developer-facing interfaces for analysis system components.
   \item Benchmarking of existing analysis components and integrating the benchmarking into SSL.
-  \item Identifying needs for development of accelerator-based fitting \& statistical tools (and other relevant components).
-  \item Integrating prototypes of AS components into SSL, followed by benchmarking \& assessment.
+  \item Identifying the needs for development of accelerator-based fitting and statistical tools (and other relevant components).
+  \item Integrating prototypes of AS components into SSL, followed by benchmarking and assessment.
 \end{itemize}
+
+%The first day of the workshop was dedicated to informational talks on the Blueprint process, the SSL and the AS R\&D activities followed by topcial presentations. The second day was a half-day dedicated to two breakout sessions -- one on focusing on SSL, the other on AS -- run in parallel, followed by a joint session to present the breakout summaries and arrive at key outcomes and actions from the workshop.
 
 \subsection{Presentations and Discussion}
 \vspace{0.2cm}
-There were 9 formal presentations delivered to trigger discussion on the main themes and objectives of the workshop:
+There were nine formal presentations delivered to trigger discussion on the main themes and objectives of the workshop:
 
 \vspace{0.2cm}
 
@@ -440,10 +443,11 @@ Proposed partners (with contact persons) include
 \vspace{0.2cm}
 Below summarize the key outcomes of the workshop:
 \begin{itemize}
-  \item Communication of the AS area plans and a preliminary set of requirements to SSL team.
-  \item Kubernetes identified as a planned {\it common denominator} technology for the SSL, increasing innovation capability through flexible infrastructure.  This idea spawned plans for a multi-site SSL {\it substrate} project that will federate SSL contributions from multiple resource providers (institutes and public cloud), offering the AS area a flexible platform for service deployment at scales needed to test the viability of system designs.
-  \item Productive engagement of the AS/SSL team with representatives from NCSA, SDSC, NYU Research Computing, industry \& cloud providers (Google, Redhat), generating action items and informing Year 2 planning of IRIS-HEP.
-  \item A concrete vision for an SSL that serves not only as an innovation space for AS developers, but as a testbed to prototype next generation infrastructure patterns for future HEP computing environments.
+  \item Communication of the AS area plans leading to a set of requirements to SSL team.
+  \item Kubernetes identified as a planned {\it common denominator} technology for the SSL, increasing our innovation capability through flexible infrastructure.
+  \item Plans for a multi-site SSL {\it substrate project} that will federate SSL contributions from multiple resource providers (institutes and public cloud), offering the AS area a flexible platform for service deployment at scales needed to test the viability of system designs.
+  \item Productive engagement of the AS/SSL team with representatives from NCSA, SDSC, NYU Research Computing, industry \& cloud providers (Google, Redhat), generating actions and informing Year 2 planning of IRIS-HEP.
+  \item A vision for an SSL that serves as an innovation space for AS developers and a testbed to prototype next generation infrastructure patterns for future HEP computing environments.
 \end{itemize}
 There were a number of action items generated by the breakout sessions, among them are:
 \begin{enumerate}
@@ -466,7 +470,6 @@ As this was the first IRIS-HEP Blueprint meeting, this feedback was an important
 \vspace{0.2cm}
 The SSL/AS Blueprint meeting was focused on planning for the Scalable Systems Laboratory and requirements for supporting the Analysis Systems area to achieve the Y2 R\&D deliverables and milestones. The meeting also included discussion with and talks from computer scientists (e.g. A. Chien on accelerated data delivery), industry partners (e.g. Google, Redhat) and resource providers at universities and HPC centers with whom we are engaging for SSL resources. The second (half) day was dedicated to splitting into working groups to develop the meeting outcomes and next steps, which were captured in a google doc and are being synthesized into a short report for dissemination. At the very end of the meeting, attendees were asked to reflect on what transpired over the day and half and provide feedback for what could be improved in future Blueprint meetings. Based on the feedback received, the meeting was very successful and generated a number of new ideas such as a “kubernetes substrate” project for SSL and detailed planning for AS area activities (e.g. the collection and curation of example analysis use cases with reference implementations and the development of initial specifications for user-user-facing interfaces to AS components).
 
-
 \appendix
 \newpage
 \section{Revision History}
@@ -482,6 +485,13 @@ The SSL/AS Blueprint meeting was focused on planning for the Scalable Systems La
   \vspace{-5pt}
   \begin{itemize}
     \item Version for IRIS-HEP Executive Board review
+  \end{itemize}
+  \item Version 0.9
+  \vspace{-5pt}
+  \begin{itemize}
+    \item Small updates to goals and key outcomes text
+    \item Syncronize content in frontpage with body of document
+    \item Fix typos
   \end{itemize}
 \end{itemize}
 
