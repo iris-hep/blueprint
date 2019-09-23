@@ -1,0 +1,132 @@
+\documentclass[11pt,letterpaper,fleqn]{article}
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage{amsfonts,amsmath}
+\usepackage{subfigure} % need for subfigures
+\usepackage{wrapfig}
+\usepackage[margin=1in]{geometry}
+\usepackage{cite}
+\usepackage{amssymb}
+\usepackage[final]{pdfpages}
+\usepackage{hyperref,enumitem}
+\hypersetup{
+colorlinks, citecolor=blue, filecolor=black, linkcolor=blue, urlcolor=blue}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{siunitx}
+\sisetup{group-separator = {,}}
+\usepackage{titlesec}
+\titlespacing\section{0pt}{6pt plus 4pt minus 2pt}{0pt plus 0pt minus 0pt}
+\titlespacing\subsection{0pt}{6pt plus 4pt minus 2pt}{0pt plus 0pt minus 0pt}
+\titlespacing\subsubsection{0pt}{6pt plus 4pt minus 2pt}{0pt plus 0pt minus 0pt}
+\usepackage{titling} % Allows custom title configuration
+\usepackage{fancyhdr} % Needed to define custom headers/footers
+\usepackage{lastpage} % Used to determine the number of pages in the document
+\usepackage[english]{babel}
+\usepackage{blindtext}
+%\usepackage{draftwatermark}
+%\SetWatermarkText{Draft v0.0}
+
+% Add you own definitions here (file report-defs.sty).
+\usepackage{report-defs}
+%\setlength{\headheight}{130pt}% ...at least 51.60004pt
+\usepackage{tikzpagenodes}
+
+%-------------------------------------------------------------------------------
+%   TITLE SECTION
+%-------------------------------------------------------------------------------
+
+\date{} % blank out date from fancyhdr
+
+\pretitle{
+\vspace{-50pt}
+\begin{flushleft} \fontsize{15}{15} \usefont{OT1}{phv}{b}{n} \selectfont} % Horizontal rule before the title
+\title{\large Summary (Draft v0.0) of Blueprint Workshop: \\
+\vspace{1pt}
+%\color{red}
+\LARGE \textit{Fast Machine Learning and Inference} \\
+\color{black} \normalsize
+\vspace{10pt}
+September 10--11, 2019 \\
+Fermilab \\
+Meeting URL: \href{https://indico.cern.ch/event/822126}{https://indico.cern.ch/event/822126}
+} % Your article title
+\posttitle{\par\end{flushleft}\vskip 0.5em} % Whitespace under the title
+\preauthor
+{
+  \begin{flushleft}
+    \vspace{-13pt}
+    {\normalfont Workshop Organizers:} \\
+    \vspace{3pt}
+    \large \lineskip 0.5em \usefont{OT1}{phv}{b}{sl} \color{black}} % Author font configuration
+    \author{Kyle Cranmer {\normalfont(New York University)}
+      \and  Rob Gardner {\normalfont(University of Chicago)}
+      \and  Mark Neubauer {\normalfont(University of Illinois at Urbana-Champaign)}
+      }
+      \postauthor{\par
+      \vspace{10pt}
+      {\normalfont Summary prepared by:} \\
+      \vspace{3pt}
+      Mark Neubauer {\normalfont(University of Illinois at Urbana-Champaign)}
+      \and  Rob Gardner {\normalfont(University of Chicago)}
+
+\end{flushleft} \vspace{-10pt} \HorRule} % Horizontal rule after the title
+
+\renewcommand{\and}{\\}
+
+%-------------------------------------------------------------------------------
+
+\begin{document}
+\maketitle % Print the title
+\normalfont
+
+\thispagestyle{firststyle}
+
+\vspace{-250pt}
+\hspace{360pt}
+\includegraphics[height=30mm]{../../../figures/iris-hep-bluprint-logo.png}
+
+\vspace{120pt}
+\section*{Major Goals}
+\vspace{3pt}
+\begin{itemize}
+  \item Review the status of the Analysis Systems (AS) milestones and deliverables to inform the needs for a collaborative development and testing platform.
+  \item Develop the Scalable Systems Laboratory (SSL) architecture and plans, using AS R\&D activities as specific examples.
+  \item Develop requirements on SSL to support the AS area, particularly the prototyping, benchmarking and scaling of AS deliverables toward production deployment.
+  \item Increase the visibility of SSL and AS beyond IRIS-HEP to facilitate partnerships with organizations that might provide software and computing resources toward these objectives.
+  \item Get informed on latest developments in open source technologies and methods important for the success of the SSL and AS R\&D areas of the Institute.
+\end{itemize}
+
+\section*{Key Outcomes}
+\vspace{3pt}
+\begin{itemize}
+  \item Communication of the AS area plans leading to a set of requirements to SSL team.
+  \item Kubernetes identified as a planned {\it common denominator} technology for the SSL, increasing our innovation capability through flexible infrastructure.
+  \item Plans for a multi-site SSL {\it substrate project} that will federate SSL contributions from multiple resource providers (institutes and public cloud), offering the AS area a flexible platform for service deployment at scales needed to test the viability of system designs.
+  \item Productive engagement of the AS/SSL team with representatives from NCSA, SDSC, NYU Research Computing, industry \& cloud providers (Google, Redhat), generating actions and informing Year 2 planning of IRIS-HEP.
+  \item A vision for an SSL that serves as an innovation space for AS developers and a testbed to prototype next generation infrastructure patterns for future HEP computing environments.
+\end{itemize}
+
+%-------------------------------------------------------------------------------
+
+\newpage
+\pagestyle{reststyle}
+
+\section{Overview}
+\vspace{0.2cm}
+Together with the ...
+
+\appendix
+\newpage
+\section{Revision History}
+
+\vspace{8pt}
+\begin{itemize}
+  \item Version 0.0
+  \vspace{-5pt}
+  \begin{itemize}
+    \item Initial version
+  \end{itemize}
+\end{itemize}
+
+\end{document}
