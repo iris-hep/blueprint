@@ -14,6 +14,12 @@ all: default
 text:
 	latexmk -$(LATEX) -logfilewarnings -halt-on-error $(FILENAME)
 
+text2:
+	pdflatex report
+	bibtex report
+	pdflatex report
+	pdflatex report
+
 document: clear_screen text
 
 clear_screen:

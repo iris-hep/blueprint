@@ -31,17 +31,21 @@ colorlinks, citecolor=blue, filecolor=black, linkcolor=blue, urlcolor=blue}
 \usepackage{report-defs}
 %\setlength{\headheight}{130pt}% ...at least 51.60004pt
 \usepackage{tikzpagenodes}
+\usepackage{atbegshi,picture}
 
 %-------------------------------------------------------------------------------
 %   TITLE SECTION
 %-------------------------------------------------------------------------------
 
 \date{} % blank out date from fancyhdr
+\AtBeginShipout{\AtBeginShipoutUpperLeft{%
+  \put(\dimexpr\paperwidth-1cm\relax,-1.5cm){\makebox[0pt][r]{Version 1.0}}%
+}}
 
 \pretitle{
 \vspace{-50pt}
 \begin{flushleft} \fontsize{15}{15} \usefont{OT1}{phv}{b}{n} \selectfont} % Horizontal rule before the title
-\title{\large Summary (Draft v0.9) of Blueprint Workshop: \\
+\title{\large Summary of Blueprint Workshop: \\
 \vspace{1pt}
 %\color{red}
 \LARGE \textit{Analysis Systems R\&D on Scalable Platforms} \\
@@ -492,6 +496,12 @@ The SSL/AS Blueprint meeting was focused on planning for the Scalable Systems La
     \item Small updates to goals and key outcomes text
     \item Syncronize content in frontpage with body of document
     \item Fix typos
+  \end{itemize}
+  \item Version 1.0
+  \vspace{-5pt}
+  \begin{itemize}
+    \item Add version number at top right at remove from title
+    \item First version posted
   \end{itemize}
 \end{itemize}
 
