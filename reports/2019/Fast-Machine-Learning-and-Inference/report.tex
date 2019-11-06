@@ -31,6 +31,7 @@ colorlinks, citecolor=blue, filecolor=black, linkcolor=blue, urlcolor=blue}
 \usepackage{report-defs}
 %\setlength{\headheight}{130pt}% ...at least 51.60004pt
 \usepackage{tikzpagenodes}
+\usepackage{atbegshi,picture}
 \usepackage{natbib}
 \bibliographystyle{unsrt}
 
@@ -39,7 +40,9 @@ colorlinks, citecolor=blue, filecolor=black, linkcolor=blue, urlcolor=blue}
 %-------------------------------------------------------------------------------
 
 \date{} % blank out date from fancyhdr
-
+\AtBeginShipout{\AtBeginShipoutUpperLeft{%
+  \put(\dimexpr\paperwidth-1cm\relax,-1.5cm){\makebox[0pt][r]{Version 0.1}}%
+}}
 \pretitle{
 \vspace{-50pt}
 \begin{flushleft} \fontsize{15}{15} \usefont{OT1}{phv}{b}{n} \selectfont} % Horizontal rule before the title
@@ -187,10 +190,10 @@ There are exciting challenges in ``fast machine learning'' for fundamental physi
 
 \vspace{8pt}
 \begin{itemize}
-  \item Version 0.0
+  \item Version 0.1
   \vspace{-5pt}
   \begin{itemize}
-    \item Initial version
+    \item Initial version from Nhan and Co.
   \end{itemize}
 \end{itemize}
 
