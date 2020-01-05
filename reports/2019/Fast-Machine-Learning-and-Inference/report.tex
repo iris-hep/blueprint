@@ -104,21 +104,18 @@ Meeting URL: \href{https://indico.cern.ch/event/822126}{https://indico.cern.ch/e
 \section*{Major Goals}
 \vspace{3pt}
 \begin{itemize}
-  \item Review the status of the Analysis Systems (AS) milestones and deliverables to inform the needs for a collaborative development and testing platform.
-  \item Develop the Scalable Systems Laboratory (SSL) architecture and plans, using AS R\&D activities as specific examples.
-  \item Develop requirements on SSL to support the AS area, particularly the prototyping, benchmarking and scaling of AS deliverables toward production deployment.
-  \item Increase the visibility of SSL and AS beyond IRIS-HEP to facilitate partnerships with organizations that might provide software and computing resources toward these objectives.
-  \item Get informed on latest developments in open source technologies and methods important for the success of the SSL and AS R\&D areas of the Institute.
+  \item Summarize the current status of R\&D in the field of fast machine learning and inference and get informed by experts on the latest technologies
+  \item Communicate and contrast the various technological choices available for both hardware trigger algorithms and heterogeneous computing with accelerated machine learning
+  \item Build and educate the community for developing a wide range of accelerated ML use-cases
 \end{itemize}
 
 \section*{Key Outcomes}
 \vspace{3pt}
 \begin{itemize}
-  \item Communication of the AS area plans leading to a set of requirements to SSL team.
-  \item Kubernetes identified as a planned {\it common denominator} technology for the SSL, increasing our innovation capability through flexible infrastructure.
-  \item Plans for a multi-site SSL {\it substrate project} that will federate SSL contributions from multiple resource providers (institutes and public cloud), offering the AS area a flexible platform for service deployment at scales needed to test the viability of system designs.
-  \item Productive engagement of the AS/SSL team with representatives from NCSA, SDSC, NYU Research Computing, industry \& cloud providers (Google, Redhat), generating actions and informing Year 2 planning of IRIS-HEP.
-  \item A vision for an SSL that serves as an innovation space for AS developers and a testbed to prototype next generation infrastructure patterns for future HEP computing environments.
+  \item Productive engagement of technical ideas and approaches between the IRIS-HEP team, the wider HEP community and leaders in academia and industry in Fast ML.
+  \item Identified a number of key FastML use cases for HEP trigger and reconstruction, including GraphNNs (e.g. HLT tracking, pixel seeding, road finding, calorimeter clustering, jet/$\tau$ reconstruction and lepton isolation), pileup suppresssion, particle flow, and improved L1 MET.
+  \item Plans for an HLT demonstrator based on Kubernetes and integrated into the SSL to facilitate shared development and documentation.
+  \item Plans for a White Paper on fast machine learning to lay out a vision for HEP and engage with the broader scientific community.
 \end{itemize}
 
 %-------------------------------------------------------------------------------
@@ -187,7 +184,7 @@ We highlight a few of the most interesting opportunities:
 
 %The closing part of the workshop talked about coordination with existing computing efforts within HEP. In particular, the focus was placed on how heterogeneous computing developments will be interfaced through the ongoing sponsored work in the IRIS-HEP project. As, a consensus, we agreed to continue to pursue various heterogeneous options with an end-goal of software packages that can be added to the scalable systems laboratory being developed within IRIS-HEP. Given that heterogeneous computing was neither completely within the scope or IRIS-HEP, nor was it out of scope there has been ambiguity as to how to deal with the interplay. The current agreement with IRIS-HEP is that the work and development within IRIS-HEP should focus on the use of machine learning algorithms for reconstruction. The work within this research on integrating these algorithms into heterogeneous computing falls out of the scope of IRIS-HEP. However, a deliverable to the IRIS-HEP scalable systems laboratory (SSL), will be a combined machine learning algorithm integrated with Hardware-based co-processor accelerators. \\
 
-The closing part of the workshop addressed coordination with existing computing efforts within HEP. In particular, the meeting also served as a blueprint workshop for IRIS-HEP, an NSF project targeting software tools needed for the future HL-LHC program. Because heterogeneous computing hardware is not firmly within the scope of IRIS-HEP, but software interface tools are, one solution would be to collaborate and interface through the IRIS-HEP effort using their Scalable Systems Laboratory (SSL) where a broad community of LHC users could access and test available hardware from partnering institutions.  Because IRIS-HEP focuses on software, machine learning algorithms will continue to be part of their scope; hardware integration is an opportunity for collaboration.
+The closing part of the workshop addressed coordination with existing computing efforts within HEP. In particular, the meeting served as a blueprint workshop for IRIS-HEP, an NSF project targeting software tools needed for the future HL-LHC program. Because heterogeneous computing hardware is not firmly within the scope of IRIS-HEP, but software interface tools are, one solution would be to collaborate and interface through the IRIS-HEP effort using their Scalable Systems Laboratory (SSL) where a broad community of LHC users could access and test available hardware from partnering institutions.  Because IRIS-HEP focuses on software, machine learning algorithms will continue to be part of their scope; hardware integration is an opportunity for collaboration.
 
 There are exciting challenges in ``fast machine learning'' for fundamental physics.  While we are beginning to develop the technology needed for current and future physics experiments, this workshop has only started to explore the cross-cutting implications both across physics and also with industry.
 
